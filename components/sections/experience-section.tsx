@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { TextReveal } from "../magicui/text-reveal";
+import { TextReveal } from "@/components/magicui/text-reveal";
 import {
     Timeline,
     TimelineContent,

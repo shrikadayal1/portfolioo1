@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { TextReveal } from "../magicui/text-reveal";
+import { TextReveal } from "@/components/magicui/text-reveal";
 import { AuroraText } from "../magicui/aurora-text";
 import { GradientBars } from "../ui/gradient-bars";
 import { motion } from "motion/react";
