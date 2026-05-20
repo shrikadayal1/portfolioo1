@@ -1,17 +1,27 @@
 "use client";
 
-import { File, HomeIcon, InfoIcon, MailIcon, Moon, Sun } from "lucide-react";
+import {
+	File,
+	HomeIcon,
+	InfoIcon,
+	MailIcon,
+	Moon,
+	Sun,
+} from "lucide-react";
+
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+
 import {
 	Tooltip,
 	TooltipContent,
 	TooltipProvider,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
+
 import { cn } from "@/lib/utils";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { useTheme } from "next-themes";
@@ -20,15 +30,22 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const Icons = {
 	email: (props: IconProps) => <MailIcon {...props} />,
+
 	linkedin: (props: IconProps) => (
-		<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
+		<svg
+			viewBox="0 0 24 24"
+			xmlns="http://www.w3.org/2000/svg"
+			{...props}
+		>
 			<title>LinkedIn</title>
+
 			<path
 				fill="currentColor"
 				d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
 			/>
 		</svg>
 	),
+
 	github: (props: IconProps) => (
 		<svg viewBox="0 0 438.549 438.549" {...props}>
 			<path
@@ -44,21 +61,24 @@ const DATA = {
 		{ href: "#hero", icon: HomeIcon, label: "Home" },
 		{ href: "#about", icon: InfoIcon, label: "About Me" },
 	],
+
 	contact: {
 		social: {
 			GitHub: {
 				name: "GitHub",
-				url: "https://github.com/AJrelapse",
+				url: "https://github.com/shrikadayal1",
 				icon: Icons.github,
 			},
+
 			LinkedIn: {
 				name: "LinkedIn",
-				url: "https://www.linkedin.com/in/ajay-anand-sm/",
+				url: "https://www.linkedin.com/",
 				icon: Icons.linkedin,
 			},
+
 			Email: {
 				name: "Send Email",
-				url: "mailto:ajayanandsm@gmail.com",
+				url: "mailto:shrika2005@gmail.com",
 				icon: Icons.email,
 			},
 		},
@@ -67,6 +87,7 @@ const DATA = {
 
 function ResumeDock() {
 	const { theme, setTheme } = useTheme();
+
 	const [mounted, setMounted] = useState(false);
 
 	useEffect(() => {
@@ -76,11 +97,16 @@ function ResumeDock() {
 	return (
 		<TooltipProvider>
 			<div className="fixed bottom-0 w-full py-8 z-100">
+
 				<Dock direction="middle">
+
 					{DATA.navbar.map((item) => (
 						<DockIcon key={item.label}>
+
 							<Tooltip>
+
 								<TooltipTrigger asChild>
+
 									<Link
 										href={item.href}
 										aria-label={item.label}
@@ -92,21 +118,35 @@ function ResumeDock() {
 											"size-12 rounded-full"
 										)}
 									>
+
 										<item.icon className="size-5" />
+
 									</Link>
+
 								</TooltipTrigger>
+
 								<TooltipContent>
 									<p>{item.label}</p>
 								</TooltipContent>
+
 							</Tooltip>
+
 						</DockIcon>
 					))}
-					<Separator orientation="vertical" className="h-full" />
+
+					<Separator
+						orientation="vertical"
+						className="h-full"
+					/>
+
 					{Object.entries(DATA.contact.social).map(
 						([name, social]) => (
 							<DockIcon key={name}>
+
 								<Tooltip>
+
 									<TooltipTrigger asChild>
+
 										<Link
 											href={social.url}
 											aria-label={social.name}
@@ -120,22 +160,36 @@ function ResumeDock() {
 												"size-12 rounded-full"
 											)}
 										>
+
 											<social.icon className="size-5" />
+
 										</Link>
+
 									</TooltipTrigger>
+
 									<TooltipContent>
 										<p>{name}</p>
 									</TooltipContent>
+
 								</Tooltip>
+
 							</DockIcon>
 						)
 					)}
-					<Separator orientation="vertical" className="h-full" />
+
+					<Separator
+						orientation="vertical"
+						className="h-full"
+					/>
+
 					<DockIcon key="download-resume">
+
 						<Tooltip>
+
 							<TooltipTrigger asChild>
+
 								<Link
-									shrika-resume.pdf
+									href="/shrika-resume.pdf"
 									aria-label="download-resume"
 									className={cn(
 										buttonVariants({
@@ -144,22 +198,32 @@ function ResumeDock() {
 										}),
 										"size-12 rounded-full"
 									)}
-									download="[Resume] Ajay-Anand.pdf"
+									download="Shrika-Dayal-Resume.pdf"
 								>
+
 									<File className="size-5" />
+
 								</Link>
+
 							</TooltipTrigger>
+
 							<TooltipContent>
 								<p>Download Resume</p>
 							</TooltipContent>
+
 						</Tooltip>
+
 					</DockIcon>
+
 					<DockIcon key="switch-theme">
+
 						<Tooltip>
+
 							<TooltipTrigger asChild>
+
 								{mounted && (
 									<Button
-										aria-label="download-resume"
+										aria-label="switch-theme"
 										variant="ghost"
 										size="icon"
 										className="size-12 rounded-full"
@@ -171,25 +235,35 @@ function ResumeDock() {
 											)
 										}
 									>
+
 										{theme === "light" ? (
 											<Moon className="size-5" />
 										) : (
 											<Sun className="size-5" />
 										)}
+
 									</Button>
 								)}
+
 							</TooltipTrigger>
+
 							<TooltipContent>
 								<p>
-									Switch Theme <br />
+									Switch Theme
+									<br />
+
 									<span className="text-muted-foreground">
 										(Dark mode recommended)
 									</span>
 								</p>
 							</TooltipContent>
+
 						</Tooltip>
+
 					</DockIcon>
+
 				</Dock>
+
 			</div>
 		</TooltipProvider>
 	);
