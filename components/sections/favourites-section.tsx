@@ -1,260 +1,384 @@
 "use client";
+
 import React from "react";
 import { TextReveal } from "../magicui/text-reveal";
 import { AuroraText } from "../magicui/aurora-text";
 import { GradientBars } from "../ui/gradient-bars";
 import { motion } from "motion/react";
-import Image from "next/image";
 
 const FavouriteSection = () => {
-  /* Animation for each card */
-  const cardAnim = {
-    initial: {
-      opacity: 0,
-      y: 40,
-      scale: 0.95,
-      filter: "blur(6px)",
-    },
-    whileInView: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      filter: "blur(0px)",
-    },
-	transition: {
-	duration: 0.6,
-	easing: "ease-out",
-	},
-    viewport: { once: true, margin: "-80px" },
-  };
 
-  return (
-    <>
-      <div className="pb-10">
-        <TextReveal className="text-center">
-          Looks like you unlocked my favorites!
-        </TextReveal>
+	const cardAnim = {
+		initial: {
+			opacity: 0,
+			y: 40,
+			scale: 0.95,
+			filter: "blur(6px)",
+		},
 
-        <div className="flex flex-col gap-10 lg:px-30 px-8">
-          {/* Headings */}
-          <motion.h2
-            className="text-4xl font-bold text-center"
-            initial={{ opacity: 0, y: 20, filter: "blur(5px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <AuroraText>Beyond code, here’s what I love</AuroraText>
-          </motion.h2>
+		whileInView: {
+			opacity: 1,
+			y: 0,
+			scale: 1,
+			filter: "blur(0px)",
+		},
 
-          <motion.h3
-            className="text-xl text-center"
-            initial={{ opacity: 0, y: 20, filter: "blur(5px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            A mix of speed, screens, sports & vibes ✨
-          </motion.h3>
+		transition: {
+			duration: 0.6,
+			ease: "easeOut",
+		},
 
-          {/* GRID */}
-          <div className="mt-5 grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
-            
-            {/* Card 1 */}
-            <motion.div {...cardAnim}
-              className="col-span-1 md:col-span-2 h-[250px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/20" />
-              <div className="absolute inset-0 backdrop-blur-xl bg-black/10" />
-              <div className="relative flex items-center justify-between h-full p-6 gap-6">
-                <div>
-                  <h3 className="text-3xl font-bold text-white">
-                    Lamborghini Huracán Tecnica
-                  </h3>
-                  <p className="text-white/80 text-sm">
-                    A masterpiece of speed & design.<br />
-                    My ultimate dream supercar.
-                  </p>
-                </div>
-                <div className="h-full aspect-square relative rounded-xl overflow-hidden">
-                  <Image src="/favorites/huracan.jpg" alt="" fill className="object-cover" />
-                </div>
-              </div>
-            </motion.div>
+		viewport: { once: true, margin: "-80px" },
+	};
 
-            {/* Card 2 */}
-            <motion.div {...cardAnim}
-              className="col-span-1 h-[250px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-yellow-500/20" />
-              <div className="absolute inset-0 backdrop-blur-xl bg-black/10" />
-              <div className="relative flex items-center justify-between h-full p-6 gap-6">
-                <div>
-                  <h3 className="text-3xl font-bold text-white">Neymar Jr.</h3>
-                  <p className="text-white/80 text-sm">
-                    Flair, skills & creativity.<br />
-                    My favorite football magician.
-                  </p>
-                </div>
-                <div className="h-full aspect-square relative rounded-xl overflow-hidden">
-                  <Image src="/favorites/neymar.jpg" alt="" fill className="object-cover" />
-                </div>
-              </div>
-            </motion.div>
+	return (
+		<>
+			<div className="pb-20">
 
-            {/* Card 3 */}
-            <motion.div {...cardAnim}
-              className="col-span-1 h-[250px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20" />
-              <div className="absolute inset-0 backdrop-blur-xl bg-black/10" />
-              <div className="relative flex items-center justify-between h-full p-6 gap-6">
-                <div>
-                  <h3 className="text-3xl font-bold text-white">Fortnite</h3>
-                  <p className="text-white/80 text-sm">
-                    Battle royale adrenaline.<br />
-                    Strategy meets reflex.
-                  </p>
-                </div>
-                <div className="h-full aspect-square relative rounded-xl overflow-hidden">
-                  <Image src="/favorites/fortnite.webp" alt="" fill className="object-cover" />
-                </div>
-              </div>
-            </motion.div>
+				<TextReveal className="text-center">
+					A glimpse into the world that inspires me
+				</TextReveal>
 
-            {/* Card 4 */}
-            <motion.div {...cardAnim}
-              className="col-span-1 md:col-span-2 h-[250px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20" />
-              <div className="absolute inset-0 backdrop-blur-xl bg-black/10" />
-              <div className="relative flex items-center justify-between h-full p-6 gap-6">
-                <div>
-                  <h3 className="text-3xl font-bold text-white">Justin Bieber</h3>
-                  <p className="text-white/80 text-sm">
-                    A global pop icon.<br />
-                    Soundtrack of my playlists.
-                  </p>
-                </div>
-                <div className="h-full aspect-square relative rounded-xl overflow-hidden">
-                  <Image src="/favorites/bieber.webp" alt="" fill className="object-cover" />
-                </div>
-              </div>
-            </motion.div>
+				<div className="flex flex-col gap-10 lg:px-30 px-8">
 
-            {/* Card 5 */}
-            <motion.div {...cardAnim}
-              className="col-span-1 md:col-span-3 h-[250px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-black/40" />
-              <div className="absolute inset-0 backdrop-blur-xl bg-black/10" />
-              <div className="relative flex items-center justify-between h-full p-6 gap-6">
-                <div>
-                  <h3 className="text-3xl font-bold text-white">Game of Thrones</h3>
-                  <p className="text-white/80 text-sm">
-                    Epic battles & politics.<br />
-                    A legendary fantasy universe.
-                  </p>
-                </div>
-                <div className="h-full aspect-square relative rounded-xl overflow-hidden">
-                  <Image src="/favorites/got.jpg" alt="" fill className="object-cover" />
-                </div>
-              </div>
-            </motion.div>
+					<motion.h2
+						className="text-4xl font-bold text-center"
+						initial={{ opacity: 0, y: 20, filter: "blur(5px)" }}
+						whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.6 }}
+					>
+						<AuroraText>
+							Beyond code here’s what drives me
+						</AuroraText>
+					</motion.h2>
 
-            {/* Card 6 */}
-            <motion.div {...cardAnim}
-              className="col-span-1 h-[250px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-600/20 to-black/40" />
-              <div className="absolute inset-0 backdrop-blur-xl bg-black/10" />
-              <div className="relative flex items-center justify-between h-full p-6 gap-6">
-                <div>
-                  <h3 className="text-3xl font-bold text-white">Gym</h3>
-                  <p className="text-white/80 text-sm">
-                    Discipline & strength.<br />
-                    My daily reset system.
-                  </p>
-                </div>
-                <div className="h-full aspect-square relative rounded-xl overflow-hidden">
-                  <Image src="/favorites/gym.jpg" alt="" fill className="object-cover" />
-                </div>
-              </div>
-            </motion.div>
+					<motion.div
+						className="max-w-6xl mx-auto text-center text-white/80 text-lg leading-10"
+						initial={{ opacity: 0, y: 20, filter: "blur(5px)" }}
+						whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.7 }}
+					>
 
-            {/* Card 7 */}
-            <motion.div {...cardAnim}
-              className="col-span-1 h-[250px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-blue-500/20" />
-              <div className="absolute inset-0 backdrop-blur-xl bg-black/10" />
-              <div className="relative flex items-center justify-between h-full p-6 gap-6">
-                <div>
-                  <h3 className="text-3xl font-bold text-white">Tropical Beaches</h3>
-                  <p className="text-white/80 text-sm">
-                    Peace & sunsets.<br />
-                    My dream escape place.
-                  </p>
-                </div>
-                <div className="h-full aspect-square relative rounded-xl overflow-hidden">
-                  <Image src="/favorites/beach.jpg" alt="" fill className="object-cover" />
-                </div>
-              </div>
-            </motion.div>
+						Beyond tech, I’m deeply interested in building ideas
+						at the intersection of AI, finance, branding, and
+						modern digital culture. I’m fascinated by how
+						world-class companies combine technology, strategy,
+						design, and storytelling to create products people
+						genuinely connect with.
+						<br />
+						<br />
+						I naturally gravitate toward ambitious thinking,
+						elegant aesthetics, high-performance environments,
+						and systems built with precision and intent.
+						Whether it’s technology, business, or branding,
+						I’m always drawn toward creating work that feels
+						impactful, refined, and built to last.
+						<br />
+						<br />
+						Outside coding, I enjoy studying consumer psychology,
+						financial markets, luxury brand positioning,
+						minimalist architecture, cinematic storytelling,
+						curated music, and the evolution of startups shaping
+						global culture.
 
-            {/* Card 8 */}
-            <motion.div {...cardAnim}
-              className="col-span-1 h-[250px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-black/40" />
-              <div className="absolute inset-0 backdrop-blur-xl bg-black/10" />
-              <div className="relative flex items-center justify-between h-full p-6 gap-6">
-                <div>
-                  <h3 className="text-3xl font-bold text-white">Hayabusa</h3>
-                  <p className="text-white/80 text-sm">
-                    The king of speed.<br />
-                    A legendary superbike.
-                  </p>
-                </div>
-                <div className="h-full aspect-square relative rounded-xl overflow-hidden">
-                  <Image src="/favorites/hayabusa.png" alt="" fill className="object-cover" />
-                </div>
-              </div>
-            </motion.div>
+					</motion.div>
 
-            {/* Card 9 */}
-            <motion.div {...cardAnim}
-              className="col-span-1 md:col-span-3 h-[250px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20" />
-              <div className="absolute inset-0 backdrop-blur-xl bg-black/10" />
-              <div className="relative flex items-center justify-between h-full p-6 gap-6">
-                <div>
-                  <h3 className="text-3xl font-bold text-white">Henry Cavill</h3>
-                  <p className="text-white/80 text-sm">
-                    Superman & The Witcher.<br />
-                    Geek icon & powerhouse actor.
-                  </p>
-                </div>
-                <div className="h-full aspect-square relative rounded-xl overflow-hidden">
-                  <Image src="/favorites/cavill.jpg" alt="" fill className="object-cover" />
-                </div>
-              </div>
-            </motion.div>
+					<div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
 
-          </div>
-        </div>
-      </div>
+						{/* STRIPE */}
+						<motion.div
+							{...cardAnim}
+							className="rounded-3xl p-7 border border-white/10 bg-gradient-to-br from-indigo-900 to-black"
+						>
 
-      {/* END SCREEN */}
-      <div className="h-screen flex items-center justify-center relative">
-        <GradientBars colors={["#7928CA", "transparent"]} />
+							<div className="flex justify-between items-start gap-6">
 
-        <motion.h1
-          className="text-center md:text-7xl text-5xl font-bold z-10"
-          initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          Scroll complete
-          <br />
-          Mission continues...
-        </motion.h1>
-      </div>
-    </>
-  );
+								<div>
+									<h3 className="text-3xl font-bold text-white">
+										Stripe
+									</h3>
+
+									<p className="text-white/70 mt-4 leading-7 max-w-xs">
+										Clean design, elite engineering,
+										and financial infrastructure built
+										with elegance and simplicity.
+									</p>
+								</div>
+
+								<img
+									src="https://cdn.worldvectorlogo.com/logos/stripe-4.svg"
+									alt="Stripe"
+									className="w-20 h-20 object-contain rounded-2xl bg-white p-3"
+								/>
+
+							</div>
+
+						</motion.div>
+
+						{/* BLOOMBERG */}
+						<motion.div
+							{...cardAnim}
+							className="rounded-3xl p-7 border border-white/10 bg-gradient-to-br from-orange-900 to-black"
+						>
+
+							<div className="flex justify-between items-start gap-6">
+
+								<div>
+									<h3 className="text-3xl font-bold text-white">
+										Bloomberg Terminal
+									</h3>
+
+									<p className="text-white/70 mt-4 leading-7 max-w-xs">
+										The intensity of markets, data,
+										and real-time decision making
+										deeply fascinates me.
+									</p>
+								</div>
+
+								<img
+									src="https://www.thebalancemoney.com/thmb/ROPYcIKeb6uEMzjXtJQHaPiHJzk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-526663126-1edf624c7b38489a9c8c38948aadfd5f.jpg"
+									alt="Bloomberg"
+									className="w-32 h-32 object-cover rounded-2xl"
+								/>
+
+							</div>
+
+						</motion.div>
+
+						{/* WARREN BUFFETT */}
+						<motion.div
+							{...cardAnim}
+							className="rounded-3xl p-7 border border-white/10 bg-gradient-to-br from-green-900 to-black"
+						>
+
+							<div className="flex justify-between items-start gap-6">
+
+								<div>
+									<h3 className="text-3xl font-bold text-white">
+										Warren Buffett
+									</h3>
+
+									<p className="text-white/70 mt-4 leading-7 max-w-xs">
+										Long-term thinking, discipline,
+										and timeless decision making.
+									</p>
+								</div>
+
+								<img
+									src="https://upload.wikimedia.org/wikipedia/commons/5/51/Warren_Buffett_KU_Visit.jpg"
+									alt="Warren Buffett"
+									className="w-24 h-24 object-cover rounded-2xl"
+								/>
+
+							</div>
+
+						</motion.div>
+
+						{/* FALGUNI NAYAR */}
+						<motion.div
+							{...cardAnim}
+							className="rounded-3xl p-7 border border-white/10 bg-gradient-to-br from-pink-900 to-black"
+						>
+
+							<div className="flex justify-between items-start gap-6">
+
+								<div>
+									<h3 className="text-3xl font-bold text-white">
+										Falguni Nayar
+									</h3>
+
+									<p className="text-white/70 mt-4 leading-7 max-w-xs">
+										An inspiring blend of branding,
+										business, luxury, and long-term vision.
+									</p>
+								</div>
+
+								<img
+									src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRls7gUqmwdTo3Gn9FJu07VLar1a2fMJ6hJ5A&s"
+									alt="Falguni Nayar"
+									className="w-24 h-24 object-cover rounded-2xl"
+								/>
+
+							</div>
+
+						</motion.div>
+
+						{/* LEENA NAIR */}
+						<motion.div
+							{...cardAnim}
+							className="rounded-3xl p-7 border border-white/10 bg-gradient-to-br from-yellow-900 to-black"
+						>
+
+							<div className="flex justify-between items-start gap-6">
+
+								<div>
+									<h3 className="text-3xl font-bold text-white">
+										Leena Nair
+									</h3>
+
+									<p className="text-white/70 mt-4 leading-7 max-w-xs">
+										Global leadership, elegance,
+										and redefining modern luxury culture.
+									</p>
+								</div>
+
+								<img
+									src="https://www.abouther.com/sites/default/files/2021/12/15/leena_nair_1.jpg"
+									alt="Leena Nair"
+									className="w-24 h-24 object-cover rounded-2xl"
+								/>
+
+							</div>
+
+						</motion.div>
+
+						{/* LUXURY BRANDING */}
+						<motion.div
+							{...cardAnim}
+							className="rounded-3xl p-7 border border-white/10 bg-gradient-to-br from-zinc-800 to-black"
+						>
+
+							<div className="flex justify-between items-start gap-6">
+
+								<div>
+									<h3 className="text-3xl font-bold text-white">
+										Luxury Branding
+									</h3>
+
+									<p className="text-white/70 mt-4 leading-7 max-w-xs">
+										I admire brands that combine aesthetics,
+										storytelling, exclusivity,
+										and emotional connection flawlessly.
+									</p>
+								</div>
+
+								<img
+									src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+									alt="Luxury Branding"
+									className="w-28 h-28 object-cover rounded-2xl"
+								/>
+
+							</div>
+
+						</motion.div>
+
+						{/* MODERN STARTUPS */}
+						<motion.div
+							{...cardAnim}
+							className="rounded-3xl p-7 border border-white/10 bg-gradient-to-br from-cyan-900 to-black"
+						>
+
+							<div className="flex justify-between items-start gap-6">
+
+								<div>
+									<h3 className="text-3xl font-bold text-white">
+										Modern Startups
+									</h3>
+
+									<p className="text-white/70 mt-4 leading-7 max-w-xs">
+										Startups shaping culture through
+										technology, product thinking,
+										and digital influence.
+									</p>
+								</div>
+
+								<img
+									src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+									alt="Startup"
+									className="w-28 h-28 object-cover rounded-2xl"
+								/>
+
+							</div>
+
+						</motion.div>
+
+						{/* AI + FINANCE */}
+						<motion.div
+							{...cardAnim}
+							className="rounded-3xl p-7 border border-white/10 bg-gradient-to-br from-blue-950 to-black"
+						>
+
+							<div className="flex justify-between items-start gap-6">
+
+								<div>
+									<h3 className="text-3xl font-bold text-white">
+										AI & Finance
+									</h3>
+
+									<p className="text-white/70 mt-4 leading-7 max-w-xs">
+										Especially interested in how AI is
+										transforming finance, products,
+										and consumer behavior globally.
+									</p>
+								</div>
+
+								<img
+									src="https://images.unsplash.com/photo-1639322537228-f710d846310a"
+									alt="AI Finance"
+									className="w-28 h-28 object-cover rounded-2xl"
+								/>
+
+							</div>
+
+						</motion.div>
+
+						{/* MINIMAL DESIGN */}
+						<motion.div
+							{...cardAnim}
+							className="rounded-3xl p-7 border border-white/10 bg-gradient-to-br from-neutral-900 to-black"
+						>
+
+							<div className="flex justify-between items-start gap-6">
+
+								<div>
+									<h3 className="text-3xl font-bold text-white">
+										Minimal Design
+									</h3>
+
+									<p className="text-white/70 mt-4 leading-7 max-w-xs">
+										Clean interfaces, thoughtful systems,
+										and refined aesthetics always
+										stand out to me.
+									</p>
+								</div>
+
+								<img
+									src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2"
+									alt="Minimal Design"
+									className="w-28 h-28 object-cover rounded-2xl"
+								/>
+
+							</div>
+
+						</motion.div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div className="h-screen flex items-center justify-center relative">
+
+				<GradientBars colors={["#7928CA", "transparent"]} />
+
+				<motion.h1
+					className="text-center md:text-7xl text-5xl font-bold z-10"
+					initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+					whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+					viewport={{ once: true }}
+					transition={{ duration: 1 }}
+				>
+					Building ideas
+					<br />
+					that actually last
+				</motion.h1>
+
+			</div>
+		</>
+	);
 };
 
 export default FavouriteSection;

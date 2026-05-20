@@ -3,20 +3,20 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Ajay Anand | Software Engineer",
+	title: "Shrika Dayal | AI & Business Enthusiast",
 	description:
-		"Hello! I am Ajay Anand, a Software Engineer and AI Enthusiast passionate about building scalable full-stack applications and intelligent AI systems. Explore my projects, skills, and experience.",
+		"Hello! I am Shrika Dayal — an AI Enthusiast,  geek, and Business + Tech Enthusiast passionate about building modern digital experiences, scalable systems, and impactful ideas at the intersection of technology, strategy, and innovation.",
 	openGraph: {
 		type: "website",
-		title: "Ajay Anand | Software Engineer",
+		title: "Shrika Dayal | AI & Business Enthusiast",
 		description:
-			"Portfolio of Ajay Anand — Software Engineer, AI Enthusiast, and Full-Stack Developer building AI-powered and scalable systems.",
+			"Portfolio of Shrika Dayal — exploring AI,  , business strategy, branding, and modern technology through ambitious and impactful digital experiences.",
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Ajay Anand | Software Engineer",
+		title: "Shrika Dayal | AI & Business Enthusiast",
 		description:
-			"Explore Ajay Anand’s portfolio — Software Engineer specializing in Full-Stack Development, AI, and Scalable Systems.",
+			"Explore Shrika Dayal’s portfolio — AI Enthusiast,    geek, and Business + Tech Enthusiast focused on innovation, strategy, and scalable digital systems.",
 	},
 };
 

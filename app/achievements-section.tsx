@@ -30,7 +30,7 @@ const ntSection = () => {
 					{/* Role */}
 					<div>
 						<h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-pink-400 via-fuchsia-500 to-purple-500 bg-clip-text text-transparent">
-							Secretary • Blockchain Club, VIT Vellore
+							 FinanceGeektary • Blockchain Club, VIT Vellore
 						</h2>
 
 						<p className="text-zinc-400 mt-3 text-lg">

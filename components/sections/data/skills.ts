@@ -6,66 +6,159 @@ interface Skills {
 }
 
 const skills: Skills = {
-	"Web Technologies": [
-		{ name: "ReactJS", img: "https://cdn.svgporn.com/logos/react.svg" },
-		{ name: "NextJS", img: "https://cdn.svgporn.com/logos/nextjs-icon.svg" },
-		{ name: "TailwindCSS", img: "https://cdn.svgporn.com/logos/tailwindcss-icon.svg" },
-		{ name: "Bootstrap", img: "https://cdn.svgporn.com/logos/bootstrap.svg" },
-		{ name: "HTML", img: "https://cdn.svgporn.com/logos/html-5.svg" },
-		{ name: "CSS", img: "https://cdn.svgporn.com/logos/css-3.svg" },
-		{ name: "JavaScript", img: "https://cdn.svgporn.com/logos/javascript.svg" },
-		{ name: "TypeScript", img: "https://cdn.svgporn.com/logos/typescript-icon.svg" },
-		{ name: "NodeJS", img: "https://cdn.svgporn.com/logos/nodejs-icon.svg" },
-		{ name: "ExpressJS", img: "https://cdn.svgporn.com/logos/express.svg" },
-		{ name: "FastAPI", img: "https://cdn.svgporn.com/logos/fastapi.svg" },
-		{ name: "Shadcn UI", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-		{ name: "Three.js", img: "https://cdn.svgporn.com/logos/threejs.svg" },
-		{ name: "Axios", img: "https://cdn.svgporn.com/logos/axios.svg" },
-	],
-
-	"AI / Machine Learning": [
-		{ name: "PyTorch", img: "https://cdn.svgporn.com/logos/pytorch-icon.svg" },
-		{ name: "TensorFlow", img: "https://cdn.svgporn.com/logos/tensorflow.svg" },
-		{ name: "Scikit-learn", img: "https://cdn.svgporn.com/logos/scikit-learn.svg" },
-		{ name: "NumPy", img: "https://cdn.svgporn.com/logos/numpy.svg" },
-		{ name: "Pandas", img: "https://cdn.svgporn.com/logos/pandas-icon.svg" },
+	"AI + Analytics": [
 		{
-			name: "HuggingFace Transformers",
-			img: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
-		}
+			name: "Machine Learning",
+			img: "https://cdn.svgporn.com/logos/tensorflow.svg",
+		},
+		{
+			name: "Scikit-learn",
+			img: "https://cdn.svgporn.com/logos/scikit-learn.svg",
+		},
+		{
+			name: "Computer Vision",
+			img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg",
+		},
+		{
+			name: "YOLO",
+			img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+		},
+		{
+			name: "Roboflow",
+			img: "https://avatars.githubusercontent.com/u/53104146?s=200&v=4",
+		},
+		{
+			name: "Pandas",
+			img: "https://cdn.svgporn.com/logos/pandas-icon.svg",
+		},
+		{
+			name: "NumPy",
+			img: "https://cdn.svgporn.com/logos/numpy.svg",
+		},
+		{
+			name: "Feature Engineering",
+			img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+		},
 	],
 
-	"Databases": [
-		{ name: "MySQL", img: "https://cdn.svgporn.com/logos/mysql.svg" },
-		{ name: "PostgreSQL", img: "https://cdn.svgporn.com/logos/postgresql.svg" },
-		{ name: "MongoDB", img: "https://cdn.svgporn.com/logos/mongodb-icon.svg" },
-		{ name: "Firebase Firestore", img: "https://cdn.svgporn.com/logos/firebase.svg" },
+	"Business + Finance": [
+		{
+			name: "Financial Reporting",
+			img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+		},
+		{
+			name: "KPI Dashboards",
+			img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg",
+		},
+		{
+			name: "Business Analytics",
+			img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+		},
+		{
+			name: "Market Research",
+			img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+		},
+		{
+			name: "Investment Analysis",
+			img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+		},
+		{
+			name: "Excel",
+			img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+		},
+		{
+			name: "Power Query",
+			img: "https://upload.wikimedia.org/wikipedia/commons/7/73/Microsoft_Excel_2013-2019_logo.svg",
+		},
+		{
+			name: "Pivot Tables",
+			img: "https://upload.wikimedia.org/wikipedia/commons/7/73/Microsoft_Excel_2013-2019_logo.svg",
+		},
 	],
 
-	"Cloud & DevOps": [
-		{ name: "AWS", img: "https://cdn.svgporn.com/logos/aws.svg" },
-		{ name: "Docker", img: "https://cdn.svgporn.com/logos/docker-icon.svg" },
-		{ name: "Linux", img: "https://cdn.svgporn.com/logos/linux-tux.svg" },
-		{ name: "Vercel", img: "https://cdn.svgporn.com/logos/vercel-icon.svg" },
-		{ name: "Cloudflare", img: "https://cdn.svgporn.com/logos/cloudflare-icon.svg" },
-		{ name: "Kubernetes", img: "https://cdn.svgporn.com/logos/kubernetes.svg" },
+	"Programming": [
+		{
+			name: "Python",
+			img: "https://cdn.svgporn.com/logos/python.svg",
+		},
+		{
+			name: "Java",
+			img: "https://cdn.svgporn.com/logos/java.svg",
+		},
+		{
+			name: "C",
+			img: "https://cdn.svgporn.com/logos/c.svg",
+		},
+		{
+			name: "C++",
+			img: "https://cdn.svgporn.com/logos/c-plusplus.svg",
+		},
+		{
+			name: "SQL",
+			img: "https://cdn.svgporn.com/logos/mysql.svg",
+		},
+		{
+			name: "JavaScript",
+			img: "https://cdn.svgporn.com/logos/javascript.svg",
+		},
 	],
 
-	Languages: [
-		{ name: "Python", img: "https://cdn.svgporn.com/logos/python.svg" },
-		{ name: "Java", img: "https://cdn.svgporn.com/logos/java.svg" },
-		{ name: "C", img: "https://cdn.svgporn.com/logos/c.svg" },
-		{ name: "C++", img: "https://cdn.svgporn.com/logos/c-plusplus.svg" },
-		{ name: "JavaScript", img: "https://cdn.svgporn.com/logos/javascript.svg" },
-		{ name: "SQL", img: "https://cdn.svgporn.com/logos/mysql.svg" },
+	"Web + Product": [
+		{
+			name: "ReactJS",
+			img: "https://cdn.svgporn.com/logos/react.svg",
+		},
+		{
+			name: "NextJS",
+			img: "https://cdn.svgporn.com/logos/nextjs-icon.svg",
+		},
+		{
+			name: "TailwindCSS",
+			img: "https://cdn.svgporn.com/logos/tailwindcss-icon.svg",
+		},
+		{
+			name: "HTML",
+			img: "https://cdn.svgporn.com/logos/html-5.svg",
+		},
+		{
+			name: "CSS",
+			img: "https://cdn.svgporn.com/logos/css-3.svg",
+		},
+		{
+			name: "Streamlit",
+			img: "https://streamlit.io/images/brand/streamlit-mark-color.svg",
+		},
 	],
 
-	"Tools & Platforms": [
-		{ name: "Git", img: "https://cdn.svgporn.com/logos/git-icon.svg" },
-		{ name: "Postman", img: "https://cdn.svgporn.com/logos/postman-icon.svg" },
-		{ name: "Figma", img: "https://cdn.svgporn.com/logos/figma.svg" },
-		{ name: "Firebase", img: "https://cdn.svgporn.com/logos/firebase.svg" },
-		{ name: "Three.js Editor", img: "https://cdn.svgporn.com/logos/threejs.svg" },
+	"Cloud + Tools": [
+		{
+			name: "AWS",
+			img: "https://cdn.svgporn.com/logos/aws.svg",
+		},
+		{
+			name: "Docker",
+			img: "https://cdn.svgporn.com/logos/docker-icon.svg",
+		},
+		{
+			name: "Git",
+			img: "https://cdn.svgporn.com/logos/git-icon.svg",
+		},
+		{
+			name: "GitHub",
+			img: "https://cdn.svgporn.com/logos/github-icon.svg",
+		},
+		{
+			name: "Postman",
+			img: "https://cdn.svgporn.com/logos/postman-icon.svg",
+		},
+		{
+			name: "VS Code",
+			img: "https://cdn.svgporn.com/logos/visual-studio-code.svg",
+		},
+		{
+			name: "Jupyter Notebook",
+			img: "https://cdn.svgporn.com/logos/jupyter.svg",
+		},
 	],
 };
 

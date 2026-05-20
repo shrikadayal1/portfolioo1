@@ -7,7 +7,6 @@ import { GradientBars } from "../ui/gradient-bars";
 import { motion } from "motion/react";
 
 const FavouriteSection = () => {
-
 	const cardAnim = {
 		initial: {
 			opacity: 0,
@@ -36,7 +35,7 @@ const FavouriteSection = () => {
 			<div className="pb-10">
 
 				<TextReveal className="text-center">
-					Looks like you unlocked my favorites!
+					A glimpse into the world that inspires me
 				</TextReveal>
 
 				<div className="flex flex-col gap-10 lg:px-30 px-8">
@@ -48,44 +47,49 @@ const FavouriteSection = () => {
 						viewport={{ once: true }}
 						transition={{ duration: 0.6 }}
 					>
-						<AuroraText>Beyond code, here’s what I love</AuroraText>
+						<AuroraText>
+							Beyond code, here’s what drives me
+						</AuroraText>
 					</motion.h2>
 
 					<motion.div
-						className="max-w-5xl mx-auto text-center text-white/80 text-lg leading-9"
+						className="max-w-6xl mx-auto text-center text-white/80 text-lg leading-9"
 						initial={{ opacity: 0, y: 20, filter: "blur(5px)" }}
 						whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.7 }}
 					>
 
-						I’m deeply interested in building ideas at the
-						intersection of AI, finance, branding, and modern
-						digital culture. I’m fascinated by how world-class
-						companies combine technology, strategy, design, and
-						storytelling to create products people genuinely
-						connect with. I naturally gravitate toward ambitious
-						thinking, elegant aesthetics, high-performance
-						environments, and systems built with precision and
-						intent.
+						Beyond tech, I’m deeply interested in building ideas
+						at the intersection of AI, finance, branding, and
+						modern digital culture. I’m fascinated by how
+						world-class companies combine technology, strategy,
+						design, and storytelling to create products people
+						genuinely connect with.
 						<br />
 						<br />
-						Outside tech, I enjoy studying consumer psychology,
-						financial markets, luxury brand positioning, and
-						modern startups shaping global culture. I’m also
-						inspired by minimalist design, cinematic storytelling,
-						architecture, curated music, and thoughtfully crafted
-						digital experiences — always aiming to build work that
-						feels impactful, refined, and built to last.
+						I naturally gravitate toward ambitious thinking,
+						elegant aesthetics, high-performance environments,
+						and systems built with precision and intent.
+						Whether it’s technology, business, or branding,
+						I’m always drawn toward creating work that feels
+						impactful, refined, and built to last.
+						<br />
+						<br />
+						Outside coding, I enjoy studying consumer psychology,
+						financial markets, luxury brand positioning,
+						minimalist architecture, cinematic storytelling,
+						curated music, and the evolution of startups shaping
+						global culture.
 
 					</motion.div>
 
 					<div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
 
-						{/* CARD 1 */}
+						{/* STRIPE */}
 						<motion.div
 							{...cardAnim}
-							className="rounded-2xl p-6 border border-white/10 bg-gradient-to-br from-orange-900 to-black"
+							className="rounded-2xl p-6 border border-white/10 bg-gradient-to-br from-indigo-900 to-black"
 						>
 
 							<div className="flex justify-between items-start gap-4">
@@ -96,24 +100,26 @@ const FavouriteSection = () => {
 									</h3>
 
 									<p className="text-white/70 mt-4 leading-7 max-w-xs">
-										Finance with taste. Infrastructure and simplicity combined beautifully.
+										A perfect example of clean design,
+										world-class engineering, and financial
+										infrastructure built beautifully.
 									</p>
 								</div>
 
 								<img
 									src="https://cdn.worldvectorlogo.com/logos/stripe-4.svg"
 									alt="Stripe"
-									className="w-16 h-16 object-contain rounded-xl bg-white p-2"
+									className="w-20 h-20 object-contain rounded-xl bg-white p-3"
 								/>
 
 							</div>
 
 						</motion.div>
 
-						{/* CARD 2 */}
+						{/* BLOOMBERG */}
 						<motion.div
 							{...cardAnim}
-							className="rounded-2xl p-6 border border-white/10 bg-gradient-to-br from-green-900 to-black"
+							className="rounded-2xl p-6 border border-white/10 bg-gradient-to-br from-orange-900 to-black"
 						>
 
 							<div className="flex justify-between items-start gap-4">
@@ -124,24 +130,26 @@ const FavouriteSection = () => {
 									</h3>
 
 									<p className="text-white/70 mt-4 leading-7 max-w-xs">
-										Where data meets decisions and markets move in real time.
+										The intensity of global finance,
+										real-time markets, and data-driven
+										decision making fascinates me.
 									</p>
 								</div>
 
 								<img
 									src="https://www.thebalancemoney.com/thmb/ROPYcIKeb6uEMzjXtJQHaPiHJzk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-526663126-1edf624c7b38489a9c8c38948aadfd5f.jpg"
-									alt="Bloomberg"
-									className="w-16 h-16 object-cover rounded-xl"
+									alt="Bloomberg Terminal"
+									className="w-32 h-32 object-cover rounded-2xl"
 								/>
 
 							</div>
 
 						</motion.div>
 
-						{/* CARD 3 */}
+						{/* WARREN BUFFETT */}
 						<motion.div
 							{...cardAnim}
-							className="rounded-2xl p-6 border border-white/10 bg-gradient-to-br from-blue-900 to-black"
+							className="rounded-2xl p-6 border border-white/10 bg-gradient-to-br from-green-900 to-black"
 						>
 
 							<div className="flex justify-between items-start gap-4">
@@ -152,24 +160,25 @@ const FavouriteSection = () => {
 									</h3>
 
 									<p className="text-white/70 mt-4 leading-7 max-w-xs">
-										Long-term thinking, patience, and disciplined decisions.
+										Long-term thinking, patience, discipline,
+										and timeless decision making.
 									</p>
 								</div>
 
 								<img
 									src="https://upload.wikimedia.org/wikipedia/commons/5/51/Warren_Buffett_KU_Visit.jpg"
 									alt="Warren Buffett"
-									className="w-16 h-16 object-cover rounded-xl"
+									className="w-24 h-24 object-cover rounded-2xl"
 								/>
 
 							</div>
 
 						</motion.div>
 
-						{/* CARD 4 */}
+						{/* FALGUNI */}
 						<motion.div
 							{...cardAnim}
-							className="rounded-2xl p-6 border border-white/10 bg-gradient-to-br from-purple-900 to-black"
+							className="rounded-2xl p-6 border border-white/10 bg-gradient-to-br from-pink-900 to-black"
 						>
 
 							<div className="flex justify-between items-start gap-4">
@@ -180,22 +189,51 @@ const FavouriteSection = () => {
 									</h3>
 
 									<p className="text-white/70 mt-4 leading-7 max-w-xs">
-										An inspiring example of combining business,
-										branding, fashion, and long-term vision.
+										A powerful example of combining business,
+										branding, fashion, and strategic vision.
 									</p>
 								</div>
 
 								<img
 									src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRls7gUqmwdTo3Gn9FJu07VLar1a2fMJ6hJ5A&s"
 									alt="Falguni Nayar"
-									className="w-16 h-16 object-cover rounded-xl"
+									className="w-24 h-24 object-cover rounded-2xl"
 								/>
 
 							</div>
 
 						</motion.div>
 
-						{/* CARD 5 */}
+						{/* LEENA NAIR */}
+						<motion.div
+							{...cardAnim}
+							className="rounded-2xl p-6 border border-white/10 bg-gradient-to-br from-yellow-900 to-black"
+						>
+
+							<div className="flex justify-between items-start gap-4">
+
+								<div>
+									<h3 className="text-3xl font-bold text-white">
+										Leena Nair
+									</h3>
+
+									<p className="text-white/70 mt-4 leading-7 max-w-xs">
+										Leadership, elegance, global branding,
+										and redefining modern luxury culture.
+									</p>
+								</div>
+
+								<img
+									src="https://media.vogue.in/wp-content/uploads/2022/01/Leena-Nair.jpg"
+									alt="Leena Nair"
+									className="w-24 h-24 object-cover rounded-2xl"
+								/>
+
+							</div>
+
+						</motion.div>
+
+						{/* LUXURY BRANDING */}
 						<motion.div
 							{...cardAnim}
 							className="rounded-2xl p-6 border border-white/10 bg-gradient-to-br from-zinc-800 to-black"
@@ -205,26 +243,27 @@ const FavouriteSection = () => {
 
 								<div>
 									<h3 className="text-3xl font-bold text-white">
-										Global Finance
+										Luxury Branding
 									</h3>
 
 									<p className="text-white/70 mt-4 leading-7 max-w-xs">
-										Interested in financial systems, investing,
-										and how capital shapes industries.
+										I admire brands that combine aesthetics,
+										storytelling, exclusivity, and emotional
+										connection flawlessly.
 									</p>
 								</div>
 
 								<img
-									src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png"
-									alt="Finance"
-									className="w-16 h-16 object-cover rounded-xl bg-white p-2"
+									src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+									alt="Luxury Branding"
+									className="w-28 h-28 object-cover rounded-2xl"
 								/>
 
 							</div>
 
 						</motion.div>
 
-						{/* CARD 6 */}
+						{/* MODERN STARTUPS */}
 						<motion.div
 							{...cardAnim}
 							className="rounded-2xl p-6 border border-white/10 bg-gradient-to-br from-cyan-900 to-black"
@@ -238,15 +277,76 @@ const FavouriteSection = () => {
 									</h3>
 
 									<p className="text-white/70 mt-4 leading-7 max-w-xs">
-										Ambitious companies combining technology,
-										branding, growth, and digital culture.
+										Startups shaping global culture through
+										technology, design, product thinking,
+										and digital influence.
 									</p>
 								</div>
 
 								<img
-									src="https://cdn-icons-png.flaticon.com/512/1006/1006555.png"
+									src="https://images.unsplash.com/photo-1552664730-d307ca884978"
 									alt="Startup"
-									className="w-16 h-16 object-cover rounded-xl bg-white p-2"
+									className="w-28 h-28 object-cover rounded-2xl"
+								/>
+
+							</div>
+
+						</motion.div>
+
+						{/* AI + FINANCE */}
+						<motion.div
+							{...cardAnim}
+							className="rounded-2xl p-6 border border-white/10 bg-gradient-to-br from-blue-950 to-black"
+						>
+
+							<div className="flex justify-between items-start gap-4">
+
+								<div>
+									<h3 className="text-3xl font-bold text-white">
+										AI & Finance
+									</h3>
+
+									<p className="text-white/70 mt-4 leading-7 max-w-xs">
+										Especially interested in how AI is
+										transforming finance, products,
+										consumer behavior, and digital systems.
+									</p>
+								</div>
+
+								<img
+									src="https://images.unsplash.com/photo-1639322537228-f710d846310a"
+									alt="AI Finance"
+									className="w-28 h-28 object-cover rounded-2xl"
+								/>
+
+							</div>
+
+						</motion.div>
+
+						{/* MINIMAL DESIGN */}
+						<motion.div
+							{...cardAnim}
+							className="rounded-2xl p-6 border border-white/10 bg-gradient-to-br from-neutral-900 to-black"
+						>
+
+							<div className="flex justify-between items-start gap-4">
+
+								<div>
+									<h3 className="text-3xl font-bold text-white">
+										Minimal Design
+									</h3>
+
+									<p className="text-white/70 mt-4 leading-7 max-w-xs">
+										Clean interfaces, thoughtful systems,
+										and refined aesthetics always stand out
+										to me.
+									</p>
+								</div>
+
+								<img
+									src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2"
+									alt="Minimal Design"
+									className="w-28 h-28 object-cover rounded-2xl"
 								/>
 
 							</div>
@@ -270,9 +370,9 @@ const FavouriteSection = () => {
 					viewport={{ once: true }}
 					transition={{ duration: 1 }}
 				>
-					Scroll complete
+					Building ideas
 					<br />
-					Mission continues...
+					that actually last.
 				</motion.h1>
 
 			</div>

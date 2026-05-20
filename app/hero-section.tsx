@@ -39,7 +39,7 @@ const HeroSection = () => {
 					}}
 					className="relative z-10 mt-6 max-w-2xl text-center text-base text-muted-foreground md:text-lg"
 				>
-					AI Enthusiast •    FinanceGeek • Business + Tech Enthusiast
+					AI Enthusiast •  Geek • Business + Tech Enthusiast
 					<br />
 					Passionate about building modern digital experiences,
 					scalable systems, and ambitious ideas at the intersection

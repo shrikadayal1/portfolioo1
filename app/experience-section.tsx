@@ -127,6 +127,44 @@ const items = [
 
     {
         id: 4,
+        date: "Jan 2026 – Present",
+        separator: "•",
+        company: "Blockchain Club, VIT Vellore",
+        description: (
+            <div className="flex flex-col gap-4">
+                <p>
+                    Led and coordinated one of the university’s growing
+                    blockchain and Web3 communities, managing both technical
+                    and operational initiatives across a network of 150+
+                    student members.
+                </p>
+
+                <p>
+                    Organized technical workshops, speaker sessions,
+                    community events, and collaborative learning initiatives
+                    focused on blockchain technology, decentralized systems,
+                    and emerging Web3 trends.
+                </p>
+
+                <p>
+                    Collaborated with cross-functional student teams for
+                    event execution, technical outreach, branding, and
+                    community engagement while strengthening leadership,
+                    communication, and organizational management skills.
+                </p>
+
+                <div className="flex gap-2 flex-wrap">
+                    <Badge variant="outline">Web3</Badge>
+                    <Badge variant="outline">Leadership</Badge>
+                    <Badge variant="outline">Blockchain</Badge>
+                    <Badge variant="outline">Community Management</Badge>
+                </div>
+            </div>
+        ),
+    },
+
+    {
+        id: 5,
         date: "2023",
         title: "Class XII & X (CBSE)",
         separator: "from",
@@ -171,10 +209,14 @@ const ExperienceSection = () => {
                                 <TimelineDate>{item.date}</TimelineDate>
 
                                 <TimelineTitle>
-                                    {item.title}{" "}
-                                    <span className="font-normal">
-                                        {item.separator ?? "at"}
-                                    </span>{" "}
+                                    {item.title && (
+                                        <>
+                                            {item.title}{" "}
+                                            <span className="font-normal">
+                                                {item.separator ?? "at"}
+                                            </span>{" "}
+                                        </>
+                                    )}
 
                                     <span
                                         className="

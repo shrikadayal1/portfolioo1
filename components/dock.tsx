@@ -135,7 +135,7 @@ function ResumeDock() {
 						<Tooltip>
 							<TooltipTrigger asChild>
 								<Link
-									href="/resume.pdf"
+									shrika-resume.pdf
 									aria-label="download-resume"
 									className={cn(
 										buttonVariants({
