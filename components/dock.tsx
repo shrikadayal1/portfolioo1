@@ -1,7 +1,6 @@
 "use client";
 
 import {
-	File,
 	HomeIcon,
 	InfoIcon,
 	MailIcon,
@@ -181,39 +180,6 @@ function ResumeDock() {
 						orientation="vertical"
 						className="h-full"
 					/>
-
-					<DockIcon key="download-resume">
-
-						<Tooltip>
-
-							<TooltipTrigger asChild>
-
-								<Link
-									href="/shrika-resume.pdf"
-									aria-label="download-resume"
-									className={cn(
-										buttonVariants({
-											variant: "ghost",
-											size: "icon",
-										}),
-										"size-12 rounded-full"
-									)}
-									download="Shrika-Dayal-Resume.pdf"
-								>
-
-									<File className="size-5" />
-
-								</Link>
-
-							</TooltipTrigger>
-
-							<TooltipContent>
-								<p>Download Resume</p>
-							</TooltipContent>
-
-						</Tooltip>
-
-					</DockIcon>
 
 					<DockIcon key="switch-theme">
 
