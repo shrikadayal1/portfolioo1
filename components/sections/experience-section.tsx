@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { TextReveal } from "@/components/magicui/text-reveal";
+
 import {
     Timeline,
     TimelineContent,
@@ -10,11 +11,11 @@ import {
     TimelineItem,
     TimelineSeparator,
     TimelineTitle,
-} from "../ui/timeline";
-import { CheckIcon } from "lucide-react";
-import { Badge } from "../ui/badge";
-import { motion } from "motion/react";
+} from "@/components/ui/timeline";
 
+import { CheckIcon } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { motion } from "motion/react";
 const items = [
     {
         id: 1,
