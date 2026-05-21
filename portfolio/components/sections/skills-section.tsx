@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import skills from "./data/skills";
 import { Separator } from "../ui/separator";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const SkillSection = () => {
 	return (

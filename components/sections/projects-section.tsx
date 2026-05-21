@@ -4,7 +4,7 @@ import { Badge } from "../ui/badge";
 import { WobbleCard } from "../ui/wobble-card";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const ProjectSection = () => {
 	return (

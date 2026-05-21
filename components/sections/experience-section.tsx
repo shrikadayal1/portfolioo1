@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/timeline";
 import { CheckIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 type TimelineItemData = {
   id: number;

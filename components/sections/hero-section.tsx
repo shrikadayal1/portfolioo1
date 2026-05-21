@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { LampContainer } from "../ui/lamp-container";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import Link from "next/link";
 

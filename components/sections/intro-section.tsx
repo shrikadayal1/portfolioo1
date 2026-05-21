@@ -3,7 +3,7 @@
 import React from "react";
 import { VelocityScroll } from "../magicui/scroll-based-velocity";
 import { Badge } from "../ui/badge";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const IntroSection = () => {
 	return (
