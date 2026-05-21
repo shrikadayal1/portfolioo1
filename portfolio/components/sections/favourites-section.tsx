@@ -24,7 +24,7 @@ const FavouriteSection = () => {
 
 		transition: {
 			duration: 0.6,
-			easing: "ease-out",
+			ease: "easeOut",
 		},
 
 		viewport: { once: true, margin: "-80px" },
