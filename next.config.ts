@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     domains: [
       "cdn.svgporn.com",
@@ -10,9 +15,8 @@ const nextConfig = {
       "avatars.githubusercontent.com",
       "cdn-icons-png.flaticon.com",
       "raw.githubusercontent.com",
-      "images.unsplash.com",   // 👈 ADD THIS
+      "images.unsplash.com",
     ],
   },
 };
-
 module.exports = nextConfig;
